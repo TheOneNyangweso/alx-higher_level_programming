@@ -5,5 +5,8 @@ for a in range(0, 10, 1):
             continue
         elif(a > b):
             continue
-        else:
+        elif (a != 8 and a != 9):
             print("{}{}, ".format(a,b), end='')
+        else:
+            print("{}{}".format(a,b))
+
