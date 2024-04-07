@@ -10,7 +10,8 @@ def open_read_file(file_name):
         lines = file.readlines()
     number_to_factor = []
     for line in lines:
-        number_to_factor.append(int(line))
+        # strip() is used to remove trailing newline characters
+        number_to_factor.append(int(line.strip()))
     return number_to_factor
 
 
@@ -45,5 +46,6 @@ def fac_list(ls):
         find_prime_factors(i)
 
 
-if len(argv) == 2:
-    fac_list(open_read_file(argv[1]))
+if __name__ == "__main__":  # add this line to ensure the script doesn't run when imported
+    if len(argv) == 2:
+        fac_list(open_read_file(argv[1]))
