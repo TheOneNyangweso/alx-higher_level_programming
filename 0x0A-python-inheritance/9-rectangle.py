@@ -1,47 +1,42 @@
 #!/usr/bin/python3
+"""Defines a class Rectangle based on 8-base_geometry.py.
 
+Attributes:
+    width (int): width of the rectangle.
+    height (int): height of the rectangle.
 """
-
-more class base
-
-"""
-
-
-
 
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-
-
-
 class Rectangle(BaseGeometry):
-
-    """ definition of a Rectangle """
+    """Class Rectangle"""
 
     def __init__(self, width, height):
+        """Creates new instances of Rectangle.
 
-        """ constructor and width, height"""
-
+        Args:
+            width (int): width of rectangle.
+            height (int): height of rectangle.
+        """
         self.__width = width
-
         self.__height = height
-
-        BaseGeometry.integer_validator(self, "width", self.__width)
-
-        BaseGeometry.integer_validator(self, "height", self.__height)
-
-
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
 
     def area(self):
+        """Calculates area of a rectangle.
 
+        Returns:
+            int: area.
+        """
         return self.__width * self.__height
 
-
-
     def __str__(self):
+        """Returns string representation of the rectangle.
 
-        """ print """
-
-        return ("[Rectangle] " + str(self.__width) + "/" + str(self.__height))
+        Returns:
+            str: string representation of rectangle.
+        """
+        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
