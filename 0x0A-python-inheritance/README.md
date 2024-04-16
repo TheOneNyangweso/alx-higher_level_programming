@@ -2,11 +2,11 @@
 **0x0A. Python - Inheritance**
 
 ## Author's Details
-Name: *Wendy Munyasi.*
+Name: *Moruri Sammy Nyamweya.*
 
-Email: *wendymunyasi@gmail.com*
+Email: *morurisammy5@gmail.com*
 
-Tel: *+254707240068.*
+Tel: *+254112686783.*
 
 ##  Requirements
 
@@ -57,7 +57,3 @@ What are, when and how to use `isinstance`, `issubclass`, `type` and `super`buil
 * **11. Square #2** - Write a class `Square` that inherits from `Rectangle` (`9-rectangle.py`). (task based on `10-square.py`). - `11-square.py`.
 * **12. My integer** - Write a class `MyInt` that inherits from `int`. - `100-my_int.py`.
 * **13. Can I?** - Write a function that adds a new attribute to an object if it’s possible. - `101-add_attribute.py`.
-
-## Collaborate
-
-To collaborate, reach me through my email address wendymunyasi@gmail.com.
