@@ -1,3 +1,3 @@
 -- 3-list_tables.sql
--- script that lists all the tables of a database in your MySQL server.
-SHOW TABLES IN $1;
+-- Script that lists all the tables of current database in your MySQL server.
+SHOW TABLES;
