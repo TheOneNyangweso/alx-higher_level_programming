@@ -3,7 +3,8 @@
 -- Host: localhost    Database: hbtn_0d_tvshows
 -- ------------------------------------------------------
 -- Server version	5.7.8-rc
-
+CREATE DATABASE IF NOT EXISTS hbtn_0d_tvshows;
+USE hbtn_0d_tvshows;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -40,33 +41,6 @@ INSERT INTO `tv_genres` VALUES (1,'Drama'),(2,'Mystery'),(3,'Adventure'),(4,'Fan
 UNLOCK TABLES;
 
 --
--- Table structure for table `tv_show_genres`
---
-
-DROP TABLE IF EXISTS `tv_show_genres`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tv_show_genres` (
-  `show_id` int(11) NOT NULL,
-  `genre_id` int(11) NOT NULL,
-  KEY `show_id` (`show_id`),
-  KEY `genre_id` (`genre_id`),
-  CONSTRAINT `tv_show_genres_ibfk_1` FOREIGN KEY (`show_id`) REFERENCES `tv_shows` (`id`),
-  CONSTRAINT `tv_show_genres_ibfk_2` FOREIGN KEY (`genre_id`) REFERENCES `tv_genres` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tv_show_genres`
---
-
-LOCK TABLES `tv_show_genres` WRITE;
-/*!40000 ALTER TABLE `tv_show_genres` DISABLE KEYS */;
-INSERT INTO `tv_show_genres` VALUES (1,1),(1,2),(2,3),(2,1),(2,4),(3,5),(4,5),(5,5),(6,6),(6,1),(6,7),(6,8),(8,6),(8,1),(8,2),(8,7),(8,8),(10,5),(10,1);
-/*!40000 ALTER TABLE `tv_show_genres` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `tv_shows`
 --
 
@@ -98,5 +72,32 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+--
+-- Table structure for table `tv_show_genres`
+--
+
+DROP TABLE IF EXISTS `tv_show_genres`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tv_show_genres` (
+  `show_id` int(11) NOT NULL,
+  `genre_id` int(11) NOT NULL,
+  KEY `show_id` (`show_id`),
+  KEY `genre_id` (`genre_id`),
+  CONSTRAINT `tv_show_genres_ibfk_1` FOREIGN KEY (`show_id`) REFERENCES `tv_shows` (`id`),
+  CONSTRAINT `tv_show_genres_ibfk_2` FOREIGN KEY (`genre_id`) REFERENCES `tv_genres` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tv_show_genres`
+--
+
+LOCK TABLES `tv_show_genres` WRITE;
+/*!40000 ALTER TABLE `tv_show_genres` DISABLE KEYS */;
+INSERT INTO `tv_show_genres` VALUES (1,1),(1,2),(2,3),(2,1),(2,4),(3,5),(4,5),(5,5),(6,6),(6,1),(6,7),(6,8),(8,6),(8,1),(8,2),(8,7),(8,8),(10,5),(10,1);
+/*!40000 ALTER TABLE `tv_show_genres` ENABLE KEYS */;
+UNLOCK TABLES;
 
 -- Dump completed on 2017-02-26 20:57:02
