@@ -1,9 +1,9 @@
 #!/usr/bin/node
 const { argv } = require('node:process');
-const str = 'x';
-const size = argv[2];
+const str = 'X';
+const size = parseInt(argv[2]);
 let num = 0;
-if (Number.isNaN(parseInt(size))) {
+if (Number.isNaN(size)) {
   console.log('Missing size');
 } else {
   for (num; num < size; num++) {
